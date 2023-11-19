@@ -7,9 +7,10 @@ def count_elems(data, idx):
     count = 0
     # цикл для сравнения элементов
     for i in range(0, len(data)):
-        print(f'{data[idx]}>{data[i]}')  # для отладки
-        if data[idx] > data[i]:
+        # print(f'{data[idx]} > {int(data[i])}')  # для отладки
+        if int(data[idx]) > int(data[i]):
             count += 1
+        count = count     
     return count
 
 
@@ -20,10 +21,9 @@ def main():
     data = data.split()
     # инициализация списка сумм накопленных сравнений
     sum_of_elements = []
-    # цикл для каждого элемента
+    # цикл для подсчёта суммы и записи результат в список
     for i in range(len(data)):
-        cout = count_elems(data, i)
-        sum_of_elements.append(cout)
+        sum_of_elements.append(count_elems(data, i))
     return sum_of_elements
 
 
