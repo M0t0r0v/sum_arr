@@ -6,8 +6,9 @@ def count_elems(data, idx):
     # инициализация счётчика
     count = 0
     # цикл для сравнения элементов
-    for i in range(0, len(data) - 1):
-        if data[idx] > data[i+1]:  # !!! <- возможно тут ошибка
+    for i in range(0, len(data)):
+        print(f'{data[idx]}>{data[i]}')
+        if data[idx] > data[i]:
             count += 1
     return count
 
