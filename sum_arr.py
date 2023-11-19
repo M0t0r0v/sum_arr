@@ -7,7 +7,7 @@ def count_elems(data, idx):
     count = 0
     # цикл для сравнения элементов
     for i in range(0, len(data)):
-        print(f'{data[idx]}>{data[i]}')
+        print(f'{data[idx]}>{data[i]}')  # для отладки
         if data[idx] > data[i]:
             count += 1
     return count
